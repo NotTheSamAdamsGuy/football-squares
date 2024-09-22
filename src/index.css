@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply rounded shadow shadow-black enabled:active:shadow-none transition-all duration-150 bg-white text-black;
+  }
+
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-500 text-white hover:bg-blue-600;
+  }
+
+  .btn-secondary {
+    @apply py-2 px-4 bg-gray-100 text-black hover:bg-gray-200 disabled:bg-gray-100 disabled:text-gray-400;
+  }
+
+  .modal-w-sm {
+    @apply w-96;
+  }
+
+  .modal-w-md {
+    @apply w-96 md:w-[32rem];
+  }
+
+  .modal-w-lg {
+    @apply w-96 md:w-[32rem] lg:w-[64rem];
+  }
+
+  .modal-w-xl {
+    @apply w-96 md:w-[32rem] lg:w-[64rem] xl:w-[96rem];
+  }
+
+  .modal-w-2xl {
+    @apply w-96 md:w-[32rem] lg:w-[64rem] xl:w-[96rem] 2xl:w-screen;
+  }
+}
+
+@font-face {
+  font-family: "Scoreboard";
+  src: url("../fonts/60s_Scoreboard.woff");
+}
+
+:root {
+  --q1-color: #1d4ed8;
+  --q2-color: #b91c1c;
+  --q3-color: #15803d;
+  --q4-color: #7e22ce;
+}
+
+body {
+  background-image: url('./assets/field.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.q1,
+.h1,
+.final {
+  background-color: var(--q1-color);
+  color: #ffffff;
+}
+
+.q1.q2
+.h1.h2 {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--q1-color),
+    var(--q1-color) 10px,
+    var(--q2-color) 10px,
+    var(--q2-color) 20px
+  );
+}
+
+.q1.q3 {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--q1-color),
+    var(--q1-color) 10px,
+    var(--q3-color) 10px,
+    var(--q3-color) 20px
+  );
+}
+
+.q1.q4 {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--q1-color),
+    var(--q1-color) 10px,
+    var(--q4-color) 10px,
+    var(--q4-color) 20px
+  );
+}
+
+.q1.q2.q3 {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--q1-color),
+    var(--q1-color) 10px,
+    var(--q2-color) 10px,
+    var(--q3-color) 20px
+  );
+}
+
+.q1.q3.q4 {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--q1-color),
+    var(--q1-color) 10px,
+    var(--q3-color) 10px,
+    var(--q4-color) 20px
+  );
+}
+
+.q1.q2.q3.q4 {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--q1-color),
+    var(--q1-color) 5px,
+    var(--q2-color) 10px,
+    var(--q3-color) 10px,
+    var(--q4-color) 20px
+  );
+}
+
+.q2,
+.h2 {
+  background-color: var(--q2-color);
+  color: #ffffff;
+}
+
+.q2.q3 {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--q2-color),
+    var(--q2-color) 10px,
+    var(--q3-color) 10px,
+    var(--q3-color) 20px
+  );
+}
+
+.q2.q4 {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--q2-color),
+    var(--q2-color) 10px,
+    var(--q4-color) 10px,
+    var(--q4-color) 20px
+  );
+}
+
+.q2.q3.q4 {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--q2-color),
+    var(--q2-color) 10px,
+    var(--q3-color) 10px,
+    var(--q4-color) 20px
+  );
+}
+
+.q3 {
+  background-color: var(--q3-color);
+  color: #ffffff;
+}
+
+.q3.q4 {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--q3-color),
+    var(--q3-color) 10px,
+    var(--q4-color) 10px,
+    var(--q4-color) 20px
+  );
+}
+
+.q4 {
+  background-color: var(--q4-color);
+  color: #ffffff;
+}
+
+.digital-text {
+  font-family: '60s Scoreboard', sans-serif;
+  color: #ffea00;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+}
+
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */

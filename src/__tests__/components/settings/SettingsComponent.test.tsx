@@ -24,6 +24,7 @@ describe("SettingsComponent", () => {
     const setHeaderNumbers = jest.fn();
     const setResults = jest.fn();
     const setBoardState = jest.fn();
+    const setSquares = jest.fn();
     const boardState: BoardState = {
       gameStatus: GameStatus.NotStarted,
       displayHeaderNumbers: false,
@@ -38,6 +39,7 @@ describe("SettingsComponent", () => {
           setTeamsInfo={setTeamsInfo}
           setHeaderNumbers={setHeaderNumbers}
           setResults={setResults}
+          setSquares={setSquares}
           gradients={gradients}
         />
       </Context.Provider>
@@ -55,6 +57,7 @@ describe("SettingsComponent", () => {
     const setHeaderNumbers = jest.fn();
     const setResults = jest.fn();
     const setBoardState = jest.fn();
+    const setSquares = jest.fn();
     const boardState: BoardState = {
       gameStatus: GameStatus.NotStarted,
       displayHeaderNumbers: false,
@@ -69,6 +72,7 @@ describe("SettingsComponent", () => {
           setTeamsInfo={setTeamsInfo}
           setHeaderNumbers={setHeaderNumbers}
           setResults={setResults}
+          setSquares={setSquares}
           gradients={gradients}
         />
       </Context.Provider>
@@ -94,6 +98,7 @@ describe("SettingsComponent", () => {
       const setHeaderNumbers = jest.fn();
       const setResults = jest.fn();
       const setBoardState = jest.fn();
+      const setSquares = jest.fn();
       const boardState: BoardState = {
         gameStatus: GameStatus.NotStarted,
         displayHeaderNumbers: false,
@@ -108,6 +113,7 @@ describe("SettingsComponent", () => {
             setTeamsInfo={setTeamsInfo}
             setHeaderNumbers={setHeaderNumbers}
             setResults={setResults}
+            setSquares={setSquares}
             gradients={gradients}
           />
         </Context.Provider>
@@ -124,6 +130,7 @@ describe("SettingsComponent", () => {
       const setHeaderNumbers = jest.fn();
       const setResults = jest.fn();
       const setBoardState = jest.fn();
+      const setSquares = jest.fn();
       const boardState: BoardState = {
         gameStatus: GameStatus.NotStarted,
         displayHeaderNumbers: false,
@@ -138,6 +145,7 @@ describe("SettingsComponent", () => {
             setTeamsInfo={setTeamsInfo}
             setHeaderNumbers={setHeaderNumbers}
             setResults={setResults}
+            setSquares={setSquares}
             gradients={gradients}
           />
         </Context.Provider>
@@ -154,6 +162,7 @@ describe("SettingsComponent", () => {
       const setHeaderNumbers = jest.fn();
       const setResults = jest.fn();
       const setBoardState = jest.fn();
+      const setSquares = jest.fn();
       const boardState: BoardState = {
         gameStatus: GameStatus.Started,
         displayHeaderNumbers: false,
@@ -168,6 +177,7 @@ describe("SettingsComponent", () => {
             setTeamsInfo={setTeamsInfo}
             setHeaderNumbers={setHeaderNumbers}
             setResults={setResults}
+            setSquares={setSquares}
             gradients={gradients}
           />
         </Context.Provider>
